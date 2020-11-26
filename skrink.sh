@@ -9,9 +9,10 @@ export iaas_to_remove=${IAAS_TO_REMOVE}
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-output_file=${OUTPUT_FILE:-${SCRIPT_DIR}/pa_export.tgz}
+default_output="${SCRIPT_DIR}/${SOURCE_IMAGE_TAG/:/-}-skinny.tgz"
+output_file=${OUTPUT_FILE:-${default_output}}
 
-docker build --build-arg IAAS_TO_REMOVE . -t platform-automation:to_export
+docker build --build-arg iaas_to_remove . -t platform-automation:to_export
 
 echo -e "\nRunning container once to create export"
 CONTAINER_SHA=$(docker run -d platform-automation:to_export ls)
