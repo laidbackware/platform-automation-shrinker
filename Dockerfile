@@ -1,4 +1,5 @@
-FROM platform-automation-image:5.0.9
+ARG source_image_tag
+FROM $source_image_tag
 
 ADD ./scripts /scripts
 
