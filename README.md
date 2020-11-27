@@ -13,5 +13,5 @@ export IAAS_TO_REMOVE="azure gcp openstack vsphere"
 ./shrink.sh
 ```
 After completion `docker image list` will show the existing image and a new image with `-skinny` appended to the tag.<br/>
-In the repo directory there will be a file containing the inital take (without the : symbol) appended with -skinny. E.g. `platform-automation-5.0.9-skinny.tgz`.<br/>
-The output file name/location can be overrode but exporting a custom value. E.g. `export OUTPUT_FILE=/tmp/export.tgz`
+In the repo directory there will be a file containing the inital tag (without the : symbol) appended with -skinny. E.g. `platform-automation-5.0.9-skinny.tgz`.<br/>
+The output file name/location can be overridden by exporting a custom value. E.g. `export OUTPUT_FILE=/tmp/export.tgz`
