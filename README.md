@@ -1,6 +1,6 @@
 # platform-automation-shrinker
 
-Shrink the VMware Tanzu Platform Automation Toolkit base image buy removing cloud provider binaries. This has been tested on version 5.0.9 which is the first version without p-automator.
+Shrink the VMware Tanzu Platform Automation Toolkit base image by removing cloud provider binaries. This has been tested on version 5.0.9 which is the first version without p-automator.
 
 ## Usage
 - Import the platform automation image from pivnet into docker, providing a label and tag.
